@@ -1,0 +1,43 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	display: grid;
+	grid-template-rows: repeat(10, 10vh);
+	grid-template-columns: repeat(10, 1fr);
+	background-image: url(sunny-day.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+main {
+	background-image: url(kitten-medium.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	grid-row: 5/10;
+	grid-column: 3 /9;
+}
+
+@media screen and (max-width: 1200px) {
+.wrapper {
+	background-image: url(night.jpg);
+}
+main {
+	background-image: url(kitten-small.png);
+}
+}
+
+@media screen and (max-width: 768px) {
+.wrapper {
+	background-image: url(dawn.png);
+	background-size: 100% 100%;
+}
+main {
+	background-image: url(kitten-large.png);
+	    grid-row: 8/11;
+    grid-column: 3 /9;
+}
+}
